@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "praxia";
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+
+  /* Surfaces */
+  --color-base-100: #0a0a0d;     /* fondo principal */
+  --color-base-200: #15151b;     /* cards, modales */
+  --color-base-300: #1c1c24;     /* secciones alternadas */
+  --color-base-content: #f5f5f8; /* texto principal */
+
+  /* Brand */
+  --color-primary: #8b5cf6;       /* violet vibrante */
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #e91e8c;     /* magenta como acento brand */
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #a855f7;        /* violet más claro para hovers */
+  --color-accent-content: #ffffff;
+
+  --color-neutral: #1a1a21;
+  --color-neutral-content: #b8b8c4;
+
+  /* Semantic */
+  --color-info: #38bdf8;
+  --color-info-content: #ffffff;
+  --color-success: #4ade80;
+  --color-success-content: #0a0a0d;
+  --color-warning: #facc15;
+  --color-warning-content: #0a0a0d;
+  --color-error: #f43f5e;
+  --color-error-content: #ffffff;
+
+  /* Shape */
+  --radius-selector: 0.375rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@theme {
+  --font-display: "Inter Tight", system-ui, sans-serif;
+  --font-sans: "Inter Tight", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+}
+
+/* ===== Globals ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter Tight", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+/* ===== Brand utilities ===== */
+
+/* Gradient text — para palabras destacadas en headlines */
+.text-praxia-gradient {
+  background: linear-gradient(135deg, #8b5cf6 0%, #e91e8c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient backgrounds */
+.bg-praxia-gradient {
+  background: linear-gradient(135deg, #8b5cf6 0%, #e91e8c 100%);
+}
+
+/* Glow para CTAs primarios */
+.shadow-praxia-glow {
+  box-shadow: 0 0 32px rgba(139, 92, 246, 0.35);
+}
+.shadow-praxia-glow-lg {
+  box-shadow: 0 0 48px rgba(139, 92, 246, 0.45), 0 0 24px rgba(233, 30, 140, 0.25);
+}
+
+/* ===== Reveal on scroll ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(48px) scale(0.97);
+  filter: blur(8px);
+  transition:
+    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform, filter;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* ===== Hero entrance ===== */
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+.hero-in {
+  animation: hero-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ===== Marquee (para stack logos) ===== */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 35s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ===== Praxia pulse (para acento) ===== */
+@keyframes praxia-pulse {
+  0% { transform: scale(0.7); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* ===== Accessibility — reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
