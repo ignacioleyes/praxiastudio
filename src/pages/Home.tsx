@@ -1,31 +1,25 @@
 import { Hero } from "../components/sections/Hero";
+import { Manifiesto } from "../components/sections/Manifiesto";
+import { Services } from "../components/sections/Services";
+import { Metodologia } from "../components/sections/Metodologia";
+// import { Casos } from "../components/sections/Casos"; // oculto hasta que el case sea efectivo
+import { Stack } from "../components/sections/Stack";
+import { Equipo } from "../components/sections/Equipo";
+import { FAQ } from "../components/sections/FAQ";
+import { Contacto } from "../components/sections/Contacto";
 
-/**
- * Página principal de Praxia Studio.
- * Compone las secciones de la landing en orden de scroll.
- *
- * Por ahora solo el Hero. Las próximas secciones a agregar:
- * - Manifiesto (#manifiesto)
- * - Servicios (#servicios)
- * - Metodología (#metodologia)
- * - Casos (#casos)
- * - Stack (#stack)
- * - Equipo (#equipo)
- * - FAQ (#faq)
- * - Contacto (#contacto)
- */
 export function Home() {
   return (
     <main>
       <Hero />
-      {/* TODO: Manifiesto */}
-      {/* TODO: Servicios */}
-      {/* TODO: Metodología */}
-      {/* TODO: Casos */}
-      {/* TODO: Stack */}
-      {/* TODO: Equipo */}
-      {/* TODO: FAQ */}
-      {/* TODO: Contacto */}
+      <Manifiesto />
+      <Services />
+      <Metodologia />
+      {/* <Casos /> — oculto hasta que el case sea efectivo */}
+      <Stack />
+      <Equipo />
+      <FAQ />
+      <Contacto />
     </main>
   );
 }

@@ -1,0 +1,16 @@
+export const stackItems: string[] = [
+  "React",
+  "TypeScript",
+  "Node",
+  "PostgreSQL",
+  "Supabase",
+  "Tailwind CSS",
+  "Vite",
+  "Vercel",
+  "Cloudflare",
+  "Leaflet",
+  "Resend",
+  "Figma",
+  "GitHub Actions",
+  "Framer Motion",
+];

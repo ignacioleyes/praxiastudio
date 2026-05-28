@@ -22,7 +22,7 @@ export function Topbar() {
           <a href="#manifiesto" className="text-base-content/70 hover:text-primary transition-colors">{t.nav.manifesto}</a>
           <a href="#servicios" className="text-base-content/70 hover:text-primary transition-colors">{t.nav.services}</a>
           <a href="#metodologia" className="text-base-content/70 hover:text-primary transition-colors">{t.nav.methodology}</a>
-          <a href="#casos" className="text-base-content/70 hover:text-primary transition-colors">{t.nav.cases}</a>
+          {/* <a href="#casos" className="text-base-content/70 hover:text-primary transition-colors">{t.nav.cases}</a> */}
           <a href="#equipo" className="text-base-content/70 hover:text-primary transition-colors">{t.nav.team}</a>
         </nav>
 

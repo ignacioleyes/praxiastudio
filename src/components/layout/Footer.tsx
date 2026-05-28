@@ -33,7 +33,7 @@ export function Footer() {
             <li><a href="#manifiesto" className="opacity-80 hover:text-primary hover:opacity-100 transition">{t.nav.manifesto}</a></li>
             <li><a href="#servicios" className="opacity-80 hover:text-primary hover:opacity-100 transition">{t.nav.services}</a></li>
             <li><a href="#metodologia" className="opacity-80 hover:text-primary hover:opacity-100 transition">{t.nav.methodology}</a></li>
-            <li><a href="#casos" className="opacity-80 hover:text-primary hover:opacity-100 transition">{t.nav.cases}</a></li>
+            {/* <li><a href="#casos" className="opacity-80 hover:text-primary hover:opacity-100 transition">{t.nav.cases}</a></li> */}
             <li><a href="#equipo" className="opacity-80 hover:text-primary hover:opacity-100 transition">{t.nav.team}</a></li>
             <li><a href="#contacto" className="opacity-80 hover:text-primary hover:opacity-100 transition">{t.nav.contact}</a></li>
           </ul>
@@ -46,8 +46,8 @@ export function Footer() {
           </h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="mailto:hola@praxiastudio.ar" className="opacity-80 hover:text-primary hover:opacity-100 transition">
-                hola@praxiastudio.ar
+              <a href="mailto:ignacio.leyes@praxiastudio.ar" className="opacity-80 hover:text-primary hover:opacity-100 transition">
+                ignacio.leyes@praxiastudio.ar
               </a>
             </li>
             <li>
